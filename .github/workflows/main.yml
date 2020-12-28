@@ -1,0 +1,21 @@
+name: 'Push to GitHub registry'
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.2
+        name: Check out code
+    
+      - uses: mr-smithers-excellent/docker-build-push@v4
+        name: Build & push Docker image
+        with:
+          image: secureyourinbox/kubernetes-deploy-action
+          registry: ghcr.io
+          dockerfile: Dockerfile
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
