@@ -1,4 +1,4 @@
-kubernetes-action
+kubernetes-deploy-action
 =============
 Interacts with kubernetes clusters calling `kubectl` commands. Integrates support for **AWS EKS**.
 
