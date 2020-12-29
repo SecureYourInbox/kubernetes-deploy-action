@@ -17,5 +17,6 @@ jobs:
           image: secureyourinbox/kubernetes-deploy-action
           registry: ghcr.io
           dockerfile: Dockerfile
+          tag: master
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
