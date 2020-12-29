@@ -2,7 +2,7 @@ name: 'Push to GitHub registry'
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   push:
